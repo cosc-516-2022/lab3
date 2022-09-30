@@ -2,13 +2,13 @@
 
 ## Setup
 
-Create a Google Cloud free tier account at: [https://azure.microsoft.com/en-us/free/](https://azure.microsoft.com/en-us/free/).
+Create a Google Cloud free tier account at: [https://cloud.google.com/free](https://cloud.google.com/free).
 
-The free tier account allows for free trials forever and 12-months free offers from your sign up period. You will need an email address to use. 
+The free tier account allows for free trials for certain products and $300 in free credits for new users. In a Canvas announcement there is also the option to get an additional $50 USD credit for use with this course. You will need an email address and credit card to sign up. 
 
 ## Google Cloud Portal
 
-Login to Google Cloud. In the Google Cloud Portal, click on `More services` then select `Databases` category. Select `Azure SQL`.
+Login to Google Cloud. In the Google Cloud Portal, search for `Bigtable`, click on `Big table` then `Create Instance`.
 
 ![Google Cloud Portal](img/1_google_cloud_portal.png)
 ![Google Databases](img/2_google_db.png)
