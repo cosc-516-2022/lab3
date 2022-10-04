@@ -8,44 +8,41 @@ The free tier account allows for free trials for certain products and $300 in fr
 
 ## Google Cloud Portal
 
-Login to Google Cloud. In the Google Cloud Portal, search for `Bigtable`, click on `Big table` then `Create Instance`.
+Login to Google Cloud. In the Google Cloud Portal, search for `Bigtable`, click on `Bigtable` then `Create Instance`.
 
 ![Google Cloud Portal](img/1_google_cloud_portal.png)
-![Google Databases](img/2_google_db.png)
 
 ## Create Google Cloud Bigtable Instance
 
-Click on `Create SQL database`. Select first option with `Single database` and click `Create`. 
+Click on `Create Instance`. Given your instance a name.
 
-<img src="img/3_azure_single_db.png" alt="Create Azure SQL Database" width="800">
+<img src="img/2a_create_instance_name.png" alt="Create Google Bigtable Instance with a Name" width="800">
 
-For `Resource group` click `Create new` and use name `rg516`. For `Database name` use `cosc516`.
+Select `SSD` as the storage type.
 
-<img src="img/4_create_db.png" alt="Create Azure SQL Database" width="800">
+<img src="img/2b_create_instance_ssd.png" alt="Use SSD Storage" width="800">
 
-For `Server` click `Create new` and use name `sqlserver516`. For authentication select `Use SQL authentication`. For user id, use `cosc516` and select your password. For `Location` use `Canada Central`.
+The cluster id should be automatically assigned, but you may change it. The cheapest region is `us-central1 (Iowa)`. It is also possible to use `northamerica-northeast2 (Toronto)`.
 
-<img src="img/5_db_server_setting.png" alt="Database Server Settings" width="600">
+<img src="img/2c_create_instance_cluster.png" alt="Create Cluster with One Node" width="1000">
 
-Under `Compute + storage`, you can leave as `Standard S0`. Alternatively, you can click `Configure database` and change to `Basic DTU-based purchasing model`. 
-
-<img src="img/6_configure_db.png" alt="Configure Database Resources" width="600">
-
-Click `Next: Networking`. On `Connectivity method` select `Public endpoint`. Click `Yes` to `Add current client IP address`. Leave with `Default Connection policy`. Click `Review + create`. Click `Create`.
-
-<img src="img/7_config_network.png" alt="Configure Network Settings" width="600">
-
-<img src="img/8_review.png" alt="Review Settings" width="600">
+**The cost of a 1 node cluster is $.70 USD per hour. Make sure you destroy cluster as soon as you are complete and only have a cluster active while you are working on the assignment.**
 
 ## Connecting to the Instance
 
-Connecting to the database can be done using Google Cloud Portal and by using code.
+Connecting to the database can be done using the cbt command-line tool or using a Bigtable client library. Google Cloud Bigtable is not a relational database and is **NOT** accessible using SQuirreL or other SQL tools.
 
+### Accessing using cbt command-line tool
 
-### Accessing using SQuirreL
+The cbt command-line interface allows performing basic administrative tasks and reading/writing data from tables. There is a [tutorial on cbt CLI](https://cloud.google.com/bigtable/docs/create-instance-write-data-cbt-cli?_ga=2.111890764.-913511634.1664467746).
 
-Google Cloud Bigtable is not a relational database and is **NOT** accessible using SQuirreL or other SQL tools.
+### Accessing using Client Library
 
+The lab will use the Java client library. An example code file called `SampleBigtable.java` is in the lab. This sample creates a table, writes data, reads data, then deletes the table. There is [more information on this "Hello world" example](https://cloud.google.com/bigtable/docs/samples-java-hello-world).
+
+For setup, follow [these instructions](https://cloud.google.com/docs/authentication/provide-credentials-adc).
+
+You will need to install the Google Cloud CLI then run the command: `gcloud auth application-default login`.
 
 ## Tasks
 
