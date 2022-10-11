@@ -48,20 +48,20 @@ You will need to install the Google Cloud CLI then run the command: `gcloud auth
 
 To test your database, write Java code using VS Code. The file to edit is `Bigtable.java`.  The test file is `TestBigtable.java`.  Fill in the methods requested (search for **TODO**).  Marks for each method are below.  You receive the marks if you pass the JUnit tests AND have followed the requirements asked in the question (including documentation and proper formatting).
 
-- +1 mark - Write the method `connect()` to make a connection to the database.
+- +1 mark - Write the method `connect()` to create a connection. Create a Bigtable data client and admin client. See [SampleBigtable.java](SampleBigtable.java) for starter code.
+- +1 mark - Write the method `createTable()` to create a table to store the sensor datd.
 - +5 marks - Write the method `load()` to load the sensor data into the database. The data files are in the [data](data) folder. 
-- +1 mark - Write the method `close()` to close the connection to the database.
-- +3 marks - Write the method `query1()` that returns ....
-- +3 marks - Write the method `query2()` that returns ...
-- +3 marks - Write the method `query3()` that returns ...
-- +4 marks - Write the method `query4()` that returns ...
+- +3 marks - Write the method `query1()` that returns the temperature at Vancouver on 2022-10-01 at 10 a.m.
+- +3 marks - Write the method `query2()` that returns the highest wind speed in the month of September 2022 in Portland.
+- +3 marks - Write the method `query3()` that returns all the readings for SeaTac for October 2, 2022.
+- +4 marks - Write the method `query4()` that returns the highest temperature at any station in the summer months of 2021 (July (7), August (8)).
 
 **Total Marks: 20**
 
 
 ## Bonus Marks: (up to 2)
 
-Up to +2 bonus marks for demonstrating some other feature of Google Cloud Bigtable.
+Up to +2 bonus marks for demonstrating some other feature of Google Cloud Bigtable or writing your own unique query and test case.
 
 ## Submission
 
