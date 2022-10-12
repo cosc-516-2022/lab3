@@ -54,7 +54,7 @@ To test your database, write Java code using VS Code. The file to edit is `Bigta
 - +3 marks - Write the method `query1()` that returns the temperature at Vancouver on 2022-10-01 at 10 a.m.
 - +3 marks - Write the method `query2()` that returns the highest wind speed in the month of September 2022 in Portland.
 - +3 marks - Write the method `query3()` that returns all the readings for SeaTac for October 2, 2022.
-- +4 marks - Write the method `query4()` that returns the highest temperature at any station in the summer months of 2021 (July (7), August (8)).
+- +4 marks - Write the method `query4()` that returns the highest temperature at any station in the summer months of 2022 (July (7), August (8)).
 
 **Total Marks: 20**
 
