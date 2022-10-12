@@ -50,7 +50,7 @@ To test your database, write Java code using VS Code. The file to edit is `Bigta
 
 - +1 mark - Write the method `connect()` to create a connection. Create a Bigtable data client and admin client. See [SampleBigtable.java](SampleBigtable.java) for starter code.
 - +1 mark - Write the method `createTable()` to create a table to store the sensor data.
-- +5 marks - Write the method `load()` to load the sensor data into the database. The data files are in the [data](data) folder. 
+- +5 marks - Write the method `load()` to load the sensor data into the database. The data files are in the [data](src/data) folder. 
 - +3 marks - Write the method `query1()` that returns the temperature at Vancouver on 2022-10-01 at 10 a.m.
 - +3 marks - Write the method `query2()` that returns the highest wind speed in the month of September 2022 in Portland.
 - +3 marks - Write the method `query3()` that returns all the readings for SeaTac for October 2, 2022.
